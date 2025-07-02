@@ -147,7 +147,7 @@ def _flash_attn_fwd(
             #     num_threads=num_threads,
             #     Q_in_regs=False,
             # )
-            pass # skip non sm100
+            assert False, "Unsupported compute capability. Supported: 9.x, 10.x"
         else:
             fa_fwd = FlashAttentionForwardSm100(
                 head_dim,

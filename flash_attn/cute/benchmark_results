@@ -1,3 +1,4 @@
+at interface _flash_attn_fwd: 
 bench_fmha_blackwell (batch_size=32, q_len=512, kv_len=512, num_heads=32, head_dim=128, causal=False), perf: 470.950 TFLOPs/s, time: 0.146 ms
 bench_fmha_blackwell (batch_size=32, q_len=1024, kv_len=1024, num_heads=32, head_dim=128, causal=False), perf: 530.587 TFLOPs/s, time: 0.518 ms
 bench_fmha_blackwell (batch_size=32, q_len=2048, kv_len=2048, num_heads=32, head_dim=128, causal=False), perf: 588.088 TFLOPs/s, time: 1.870 ms
@@ -22,3 +23,29 @@ bench_fmha_blackwell (batch_size=8, q_len=8192, kv_len=8192, num_heads=32, head_
 bench_fmha_blackwell (batch_size=4, q_len=16384, kv_len=16384, num_heads=32, head_dim=128, causal=True), perf: 565.258 TFLOPs/s, time: 7.781 ms
 bench_fmha_blackwell (batch_size=2, q_len=32768, kv_len=32768, num_heads=32, head_dim=128, causal=True), perf: 593.079 TFLOPs/s, time: 14.831 ms
 bench_fmha_blackwell (batch_size=1, q_len=65536, kv_len=65536, num_heads=32, head_dim=128, causal=True), perf: 613.419 TFLOPs/s, time: 28.679 ms
+
+at interface FlashAttentionForwardSm100:
+bench_fmha_blackwell (batch_size=32, q_len=512, kv_len=512, num_heads=32, head_dim=128, causal=False), perf: 471.057 TFLOPs/s, time: 0.146 ms
+bench_fmha_blackwell (batch_size=32, q_len=1024, kv_len=1024, num_heads=32, head_dim=128, causal=False), perf: 535.699 TFLOPs/s, time: 0.513 ms
+bench_fmha_blackwell (batch_size=32, q_len=2048, kv_len=2048, num_heads=32, head_dim=128, causal=False), perf: 581.287 TFLOPs/s, time: 1.892 ms
+bench_fmha_blackwell (batch_size=32, q_len=4096, kv_len=4096, num_heads=32, head_dim=128, causal=False), perf: 617.184 TFLOPs/s, time: 7.126 ms
+bench_fmha_blackwell (batch_size=128, q_len=512, kv_len=512, num_heads=32, head_dim=128, causal=False), perf: 455.530 TFLOPs/s, time: 0.603 ms
+bench_fmha_blackwell (batch_size=64, q_len=1024, kv_len=1024, num_heads=32, head_dim=128, causal=False), perf: 533.937 TFLOPs/s, time: 1.030 ms
+bench_fmha_blackwell (batch_size=32, q_len=2048, kv_len=2048, num_heads=32, head_dim=128, causal=False), perf: 586.427 TFLOPs/s, time: 1.875 ms
+bench_fmha_blackwell (batch_size=16, q_len=4096, kv_len=4096, num_heads=32, head_dim=128, causal=False), perf: 618.326 TFLOPs/s, time: 3.556 ms
+bench_fmha_blackwell (batch_size=8, q_len=8192, kv_len=8192, num_heads=32, head_dim=128, causal=False), perf: 636.660 TFLOPs/s, time: 6.908 ms
+bench_fmha_blackwell (batch_size=4, q_len=16384, kv_len=16384, num_heads=32, head_dim=128, causal=False), perf: 650.119 TFLOPs/s, time: 13.530 ms
+bench_fmha_blackwell (batch_size=2, q_len=32768, kv_len=32768, num_heads=32, head_dim=128, causal=False), perf: 655.647 TFLOPs/s, time: 26.832 ms
+bench_fmha_blackwell (batch_size=1, q_len=65536, kv_len=65536, num_heads=32, head_dim=128, causal=False), perf: 662.082 TFLOPs/s, time: 53.142 ms
+bench_fmha_blackwell (batch_size=32, q_len=512, kv_len=512, num_heads=32, head_dim=128, causal=True), perf: 223.829 TFLOPs/s, time: 0.154 ms
+bench_fmha_blackwell (batch_size=32, q_len=1024, kv_len=1024, num_heads=32, head_dim=128, causal=True), perf: 281.797 TFLOPs/s, time: 0.488 ms
+bench_fmha_blackwell (batch_size=32, q_len=2048, kv_len=2048, num_heads=32, head_dim=128, causal=True), perf: 374.751 TFLOPs/s, time: 1.467 ms
+bench_fmha_blackwell (batch_size=32, q_len=4096, kv_len=4096, num_heads=32, head_dim=128, causal=True), perf: 450.600 TFLOPs/s, time: 4.880 ms
+bench_fmha_blackwell (batch_size=128, q_len=512, kv_len=512, num_heads=32, head_dim=128, causal=True), perf: 226.909 TFLOPs/s, time: 0.606 ms
+bench_fmha_blackwell (batch_size=64, q_len=1024, kv_len=1024, num_heads=32, head_dim=128, causal=True), perf: 280.581 TFLOPs/s, time: 0.980 ms
+bench_fmha_blackwell (batch_size=32, q_len=2048, kv_len=2048, num_heads=32, head_dim=128, causal=True), perf: 376.310 TFLOPs/s, time: 1.461 ms
+bench_fmha_blackwell (batch_size=16, q_len=4096, kv_len=4096, num_heads=32, head_dim=128, causal=True), perf: 456.322 TFLOPs/s, time: 2.410 ms
+bench_fmha_blackwell (batch_size=8, q_len=8192, kv_len=8192, num_heads=32, head_dim=128, causal=True), perf: 522.859 TFLOPs/s, time: 4.206 ms
+bench_fmha_blackwell (batch_size=4, q_len=16384, kv_len=16384, num_heads=32, head_dim=128, causal=True), perf: 566.395 TFLOPs/s, time: 7.765 ms
+bench_fmha_blackwell (batch_size=2, q_len=32768, kv_len=32768, num_heads=32, head_dim=128, causal=True), perf: 590.668 TFLOPs/s, time: 14.892 ms
+bench_fmha_blackwell (batch_size=1, q_len=65536, kv_len=65536, num_heads=32, head_dim=128, causal=True), perf: 616.221 TFLOPs/s, time: 28.549 ms
