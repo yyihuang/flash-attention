@@ -3,7 +3,7 @@
 import cutlass
 import cutlass.cute as cute
 
-import flash_attn.cute.utils as utils
+import utils as utils
 
 
 class AttentionMask:

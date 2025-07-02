@@ -24,14 +24,14 @@ import cutlass.cute as cute
 import cutlass.cute.nvgpu.tcgen05 as tcgen05
 import cutlass.utils.blackwell_helpers as sm100_utils_basic
 
-import flash_attn.cute.utils as utils
-# import flash_attn.cute.pipeline as pipeline
-from flash_attn.cute.mask import AttentionMask
-from flash_attn.cute.softmax import SoftmaxSm100
-from flash_attn.cute.seqlen_info import SeqlenInfo
-from flash_attn.cute.block_info import BlockInfo
-from flash_attn.cute import mma_sm100_desc as sm100_desc
-from flash_attn.cute import blackwell_helpers as sm100_utils
+import utils as utils
+# import pipeline as pipeline
+from mask import AttentionMask
+from softmax import SoftmaxSm100
+from seqlen_info import SeqlenInfo
+from block_info import BlockInfo
+import mma_sm100_desc as sm100_desc
+import blackwell_helpers as sm100_utils
 
 
 # class NamedBarrierFwd(enum.IntEnum):
